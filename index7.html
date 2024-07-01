@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script/jquery-3.7.1.js"></script>
+    <script src="script/jquery-ui.js"></script>
+    <script lang="java">
+        $(function(){
+            $(".left").click(function(){
+                $(".round").animate({"left":"+=100px"}, 300);
+            })
+        })
+    </script>
+    <style type="text/css">
+        h1{
+            margin-bottom: 30px;
+        }
+
+        .box{
+            width: 300px;
+            height: 500px;
+            border: 2px solid black;
+            margin-top: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .round{
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+            background-color: red;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>jquery event</h1>
+    <button class="left">left</button>
+    <button class="rigth">right</button>
+    <button class="top">top</button>
+    <button class="bottom">bottom</button>
+
+    <div class="box">
+        <div class="round"></div>
+    </div>
+
+</body>
+</html>

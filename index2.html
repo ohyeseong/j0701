@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script/jquery-3.7.1.js"></script>
+
+    <style type="text/css">
+        body{
+            background: black;
+            padding: 20px;
+        }
+
+        .container{}
+        .container h1{
+            margin-bottom: 50px;
+            color: white;
+            font-style: italic;
+            font-size: 50px;
+        }
+
+        .container button{
+            width: 200px;
+            height: 50px;
+            border-radius: 10px;
+            border: none;
+            color: white;
+            background-color: blueviolet;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: bold;
+        }
+
+        button:hover{
+            background-color: rgb(147, 63, 180);
+        }
+    </style>
+
+    <!-- $:jquery의 약자 -->
+    <script lang="java">
+        // $(document).ready(function(){}) 작업전 준비단계
+        $(document).ready(function(){
+
+            $(".btn_1").click(function(){
+                alert("버튼1을 클릭했어요");
+                // alert: 확인창 띄우기 기능
+                $(this).css("color", "aqua");
+            })// btn_1 click
+
+            $(".btn_2").click(function(){
+                alert("버튼2를 클릭했어요");
+                $(this).css("width", "300px").css("height", "100px");
+            })// btn_2 click
+
+            $(".btn_3").click(function(){
+                console.log("버튼3번 클릭함");
+                // f12 -> 콘솔창에 '버튼3번 클릭함'이 뜸(코딩의 작업확인)
+            })// btn_3 click
+
+            $(".btn_4").click(function(){
+                console.log("버튼4번 클릭함");
+                $(this).css({"width":"150px", "height":"100px"});
+                // $(".btn_4").click(function(){})에 $(this)를 걸었다는 것은 click후에 다음의 값을 주겠다는 뜻
+            })// btn_4 click
+        })// jQuery end
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>basic jQuery</h1>
+
+        <button class="btn_1">btn_1</button>
+        <button class="btn_2">btn_2</button>
+        <button class="btn_3">btn_3</button>
+        <button class="btn_4">btn_4</button>
+        <!-- 기본적인 버튼기능을 지닌 button 태그이며 인라인구조지만 예외적으로 width, height값이 먹힘 -->
+    </div><!-- container -->
+</body>
+</html>
